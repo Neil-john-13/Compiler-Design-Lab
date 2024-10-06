@@ -1,5 +1,5 @@
 //Neil John 37
-// Shioft reduce parser
+// Shift reduce parser
 
 #include<stdio.h>
 #include<stdlib.h>
