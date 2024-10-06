@@ -88,37 +88,20 @@ Enter the number of productions: 3
 Enter the grammar:
 S->S+S
 S->S*S
-S->i 
+S->i
 
-STACK      INPUT      ACTION
-$i         +i+i       Shift
+Enter the string to parse: i+i+i
+
+STACK      INPUT      ACTION    
+$i         +i+i       Shift     
 $S         +i+i       Reduce     i -> S
-$S+        i+i        Shift
+$S+        i+i        Shift     
 $S+i       +i         Shift
 $S+S       +i         Reduce     i -> S
-$S         +i         Reduce     S+S -> S
+$S         +i         Reduce     S+S -> S       
 $S+        i          Shift
 $S+i                  Shift
 $S+S                  Reduce     i -> S
-$S                    Reduce     S+S -> S
-STACK      INPUT      ACTION
-$i         +i+i       Shift
-$S         +i+i       Reduce     i -> S
-$S+        i+i        Shift
-$S+i       +i         Shift
-$S+S       +i         Reduce     i -> S
-$S         +i         Reduce     S+S -> S
-$S+        i          Shift
-$S+i                  Shift
-$S+S                  Reduce     i -> S
-$S                    Reduce     S+S -> S
-$S+i       +i         Shift
-$S+S       +i         Reduce     i -> S
-$S         +i         Reduce     S+S -> S
-$S+        i          Shift
-$S+i                  Shift
-$S+S                  Reduce     i -> S
-$S                    Reduce     S+S -> S
 $S                    Reduce     S+S -> S
 $S                    ACCEPT
 */
